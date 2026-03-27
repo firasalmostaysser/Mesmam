@@ -44,13 +44,12 @@ const stagger = {
 function Navbar() {
   const [open, setOpen] = useState(false);
   const links = [
-    { label: "Problem", href: "#problem" },
     { label: "Solution", href: "#solution" },
-    { label: "Technology", href: "#technology" },
     { label: "Market", href: "#market" },
-    { label: "Revenue", href: "#revenue" },
-    { label: "Roadmap", href: "#roadmap" },
-    { label: "Contact", href: "#contact" },
+    { label: "Pitch Deck", href: "/pitch-deck" },
+    { label: "Business Plan", href: "/business-plan" },
+    { label: "Action Plan", href: "/action-plan" },
+    { label: "Studies", href: "/studies" },
   ];
 
   return (
