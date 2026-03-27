@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --background: #030712;
+  --foreground: #f9fafb;
+  --gold: #d4a017;
+  --gold-light: #f5d76e;
+  --uv-blue: #4f46e5;
+  --uv-glow: #818cf8;
+  --venom-green: #22c55e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-uv-blue: var(--uv-blue);
+  --color-uv-glow: var(--uv-glow);
+  --color-venom-green: var(--venom-green);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-gold {
+  background: rgba(212, 160, 23, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 160, 23, 0.15);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #d4a017, #f5d76e, #d4a017);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, #4f46e5, #818cf8, #4f46e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-gold {
+  box-shadow: 0 0 30px rgba(212, 160, 23, 0.3), 0 0 60px rgba(212, 160, 23, 0.1);
+}
+
+.glow-blue {
+  box-shadow: 0 0 30px rgba(79, 70, 229, 0.3), 0 0 60px rgba(79, 70, 229, 0.1);
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 160, 23, 0.3), transparent);
+}
