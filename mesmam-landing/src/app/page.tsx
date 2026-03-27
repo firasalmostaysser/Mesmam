@@ -50,6 +50,7 @@ function Navbar() {
     { label: "Business Plan", href: "/business-plan" },
     { label: "Action Plan", href: "/action-plan" },
     { label: "Studies", href: "/studies" },
+    { label: "Workflows", href: "/workflows" },
   ];
 
   return (
